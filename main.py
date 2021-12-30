@@ -27,9 +27,32 @@ scissors = '''
 
 #Write your code below this line 👇
 import random
+import sys
+
+#User picks choice while computer randomly picks choice
 choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors."))
 comp_choice = int(random.randint(0,2))
-print(f"{choice} vs {comp_choice}")
+
+#Graphics for choices
+print("You chose:\n")
+if choice == 0:
+  print(rock)
+elif choice == 1:
+  print(paper)
+elif choice == 2:
+  print(scissors)
+else:
+  sys.exit("You did not choose a valid option")
+
+print("Computer chose:\n")
+if comp_choice == 0:
+  print(rock)
+elif comp_choice == 1:
+  print(paper)
+else:
+  print(scissors)
+
+#Comparing choices to determine winner
 if choice == comp_choice:
     print("Draw")
 elif choice == 0:
